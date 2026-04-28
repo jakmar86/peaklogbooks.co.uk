@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Peak Log Books — Record Scotland's Mountains</title>
+<title>Peak Log Books: Record Scotland's Mountains</title>
 <meta name="description" content="Peak Log Books publishes dedicated log books for Scotland's hill lists. Record every summit, track your progress, and carry the story of every climb.">
 <link rel="icon" type="image/x-icon" href="favicon.ico">
 <link rel="icon" type="image/png" sizes="192x192" href="favicon-192.png">
@@ -732,7 +732,7 @@
     </div>
     <h1>Record Every Summit.<br><em>Carry Every Story.</em></h1>
     <p class="hero-sub">Beautifully designed log books for Scotland's great hill lists. A dedicated page for every summit, pre-filled with the details that matter.</p>
-    <a href="https://www.amazon.co.uk" class="hero-cta" target="_blank" rel="noopener">
+    <a href="https://www.amazon.co.uk/dp/B0GYS6F3CR" class="hero-cta" target="_blank" rel="noopener">
       Shop on Amazon
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
     </a>
@@ -759,14 +759,14 @@
       <p>Record all 282 Scottish Munros in one beautifully designed volume. Every summit has its own dedicated page, pre-filled with height, region and a fascinating Did You Know fact.</p>
       <p>Includes a master checklist of all 282 Munros and a completion certificate for the day you stand on your final summit.</p>
       <div class="features">
-        <div class="feature"><div class="feature-dot"></div>282 individual log pages — one per Munro</div>
+        <div class="feature"><div class="feature-dot"></div>282 individual log pages, one per Munro</div>
         <div class="feature"><div class="feature-dot"></div>Pre-filled height, region and summit fact</div>
         <div class="feature"><div class="feature-dot"></div>Record date, companions, route and conditions</div>
         <div class="feature"><div class="feature-dot"></div>Master checklist and completion certificate</div>
         <div class="feature"><div class="feature-dot"></div>Published by Peak Log Books / Dellally Limited</div>
       </div>
-      <a href="https://www.amazon.co.uk" class="btn-primary" target="_blank" rel="noopener">
-        Buy on Amazon — £10.99
+      <a href="https://www.amazon.co.uk/dp/B0GYS6F3CR" class="btn-primary" target="_blank" rel="noopener">
+        Buy on Amazon, £10.99
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
       </a>
     </div>
@@ -797,7 +797,7 @@
     <span class="section-label">About Peak Log Books</span>
     <h2>Journals and companions<br>for outdoor enthusiasts</h2>
     <div class="divider"></div>
-    <p>Peak Log Books publishes dedicated log books for Scotland's great hill lists. We believe that the record of a climb — the weather, the companions, the route taken — is as important as the climb itself.</p>
+    <p>Peak Log Books publishes dedicated log books for Scotland's great hill lists. We believe that the record of a climb, the weather, the companions, the route taken, is as important as the climb itself.</p>
     <p>Every book in the Peak Log Books series is designed to last a lifetime. Pre-filled with the details that matter, our log books give hillwalkers the structure to record their journeys properly, without the effort of researching each summit from scratch.</p>
     <p>Peak Log Books is a trading name of Dellally Limited, registered in England and Wales.</p>
   </div>
@@ -848,7 +848,7 @@
   <div class="contact-inner">
     <span class="section-label" style="color: var(--gold)">Get in Touch</span>
     <h2>We'd love to hear from you</h2>
-    <p>Questions about our books, stockist enquiries, or just want to share a summit story — we're always happy to hear from fellow hillwalkers.</p>
+    <p>Questions about our books, stockist enquiries, or just want to share a summit story. We're always happy to hear from fellow hillwalkers.</p>
     <form class="contact-form" id="contactForm">
       <input type="text" id="contactName" placeholder="Your name" required>
       <input type="email" id="contactEmail" placeholder="Email address" required>
@@ -880,7 +880,7 @@
   import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
   import { getFirestore, collection, addDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
 
-  // Firebase config — Peak Log Books
+  // Firebase config - Peak Log Books
   const firebaseConfig = {
     apiKey: "AIzaSyAbLhuB7ZHX3UAX4CLtAMaBowQI8VZITGs",
     authDomain: "peak-log-books.firebaseapp.com",
@@ -910,12 +910,12 @@
         message,
         timestamp: serverTimestamp()
       });
-      btn.textContent = 'Message sent — thank you';
+      btn.textContent = 'Message sent, thank you';
       btn.style.opacity = '0.6';
       document.getElementById('contactForm').reset();
     } catch (err) {
       console.error('Error saving message:', err);
-      btn.textContent = 'Something went wrong — please try again';
+      btn.textContent = 'Something went wrong. Please try again.';
       btn.disabled = false;
     }
   });
