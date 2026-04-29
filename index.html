@@ -25,29 +25,16 @@
     --gold: #9a7c4f;
     --slate: #2C3E50;
     --slate-light: #A8C5D6;
+    --purple: #6B3FA0;
+    --purple-dark: #522f7a;
   }
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
   html { scroll-behavior: smooth; }
-  body {
-    font-family: 'Jost', sans-serif;
-    background: var(--cream);
-    color: var(--text);
-    overflow-x: hidden;
-  }
+  body { font-family: 'Jost', sans-serif; background: var(--cream); color: var(--text); overflow-x: hidden; }
 
   /* NAV */
-  nav {
-    position: fixed;
-    top: 0; left: 0; right: 0;
-    z-index: 100;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1.25rem 3rem;
-    background: rgba(44, 74, 53, 0.97);
-    backdrop-filter: blur(8px);
-  }
+  nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 1.25rem 3rem; background: rgba(44, 74, 53, 0.97); backdrop-filter: blur(8px); }
   .nav-brand { display: flex; align-items: center; gap: 0.75rem; text-decoration: none; }
   .nav-logo svg { width: 32px; height: 28px; }
   .nav-name { font-family: 'Cormorant Garamond', serif; font-size: 1.15rem; font-weight: 400; color: var(--cream); letter-spacing: 0.04em; }
@@ -56,19 +43,8 @@
   .nav-links a:hover { color: var(--cream); }
 
   /* HERO */
-  .hero {
-    min-height: 100vh;
-    background: var(--forest-dark);
-    display: flex; flex-direction: column; align-items: center; justify-content: center;
-    text-align: center;
-    padding: 8rem 2rem 4rem;
-    position: relative; overflow: hidden;
-  }
-  .hero::before {
-    content: '';
-    position: absolute; inset: 0;
-    background: radial-gradient(ellipse 80% 60% at 50% 100%, rgba(44,74,53,0.6) 0%, transparent 70%), radial-gradient(ellipse 60% 40% at 20% 20%, rgba(154,124,79,0.08) 0%, transparent 60%);
-  }
+  .hero { min-height: 100vh; background: var(--forest-dark); display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 8rem 2rem 4rem; position: relative; overflow: hidden; }
+  .hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 80% 60% at 50% 100%, rgba(44,74,53,0.6) 0%, transparent 70%), radial-gradient(ellipse 60% 40% at 20% 20%, rgba(154,124,79,0.08) 0%, transparent 60%); }
   .hero-mountains { position: absolute; bottom: 0; left: 0; right: 0; opacity: 0.06; }
   .hero-content { position: relative; z-index: 1; max-width: 760px; }
   .hero-eyebrow { font-size: 0.72rem; font-weight: 400; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold); margin-bottom: 1.5rem; opacity: 0; animation: fadeUp 0.8s 0.2s forwards; }
@@ -85,84 +61,47 @@
   .hero-scroll span { font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(245,240,232,0.3); }
   .scroll-line { width: 1px; height: 40px; background: linear-gradient(to bottom, rgba(245,240,232,0.3), transparent); animation: scrollPulse 2s infinite; }
 
-  /* BOOKS GRID - two books side by side */
-  .books-section {
-    background: var(--cream);
-    padding: 7rem 2rem;
-  }
-  .books-section-inner {
-    max-width: 900px;
-    margin: 0 auto;
-  }
-  .books-section-header {
-    text-align: center;
-    margin-bottom: 4rem;
-  }
-  .books-section-header h2 {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(2rem, 3.5vw, 2.8rem);
-    font-weight: 300;
-    color: var(--forest-dark);
-  }
+  /* BOOKS SECTION */
+  .books-section { background: var(--cream); padding: 7rem 2rem; }
+  .books-section-inner { max-width: 1100px; margin: 0 auto; }
+  .books-section-header { text-align: center; margin-bottom: 4rem; }
+  .books-section-header h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 3.5vw, 2.8rem); font-weight: 300; color: var(--forest-dark); }
   .books-section-header h2 em { font-style: italic; color: var(--forest); }
-
-  .book-pair {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-  }
-
-  .book-entry {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .book-cover-wrap {
-    position: relative;
-    margin-bottom: 1.75rem;
-    padding-top: 1.5rem;
-  }
-  .book-cover {
-    width: 100%;
-    aspect-ratio: 6/9;
-    overflow: hidden;
-    position: relative;
-    box-shadow: -6px 6px 0 var(--forest-dark), -12px 12px 32px rgba(0,0,0,0.2);
-  }
+  .book-triple { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+  .book-entry { display: flex; flex-direction: column; }
+  .book-cover-wrap { position: relative; margin-bottom: 1.75rem; padding-top: 1.5rem; }
+  .book-cover { width: 100%; aspect-ratio: 6/9; overflow: hidden; position: relative; box-shadow: -6px 6px 0 var(--forest-dark), -12px 12px 32px rgba(0,0,0,0.2); }
   .book-cover img { width: 100%; height: 100%; object-fit: cover; }
-  .book-badge {
-    position: absolute;
-    top: 0; right: 0;
-    font-size: 0.62rem; letter-spacing: 0.15em; text-transform: uppercase;
-    padding: 0.35rem 0.75rem;
-    color: var(--white);
-    z-index: 2;
-  }
+  .book-badge { position: absolute; top: 0; right: 0; font-size: 0.62rem; letter-spacing: 0.15em; text-transform: uppercase; padding: 0.35rem 0.75rem; color: var(--white); z-index: 2; }
   .book-badge.live { background: var(--forest); }
   .book-badge.review { background: var(--slate); }
-
+  .book-badge.soon { background: var(--purple); }
   .book-info { flex: 1; display: flex; flex-direction: column; }
   .book-series-label { font-size: 0.68rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.6rem; display: block; }
-  .book-info h3 { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.6rem, 2.5vw, 2.2rem); font-weight: 300; line-height: 1.15; color: var(--forest-dark); margin-bottom: 1rem; }
+  .book-info h3 { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.3rem, 2vw, 1.9rem); font-weight: 300; line-height: 1.15; color: var(--forest-dark); margin-bottom: 1rem; }
   .book-info h3 em { font-style: italic; color: var(--forest); }
-  .book-info p { font-size: 0.9rem; font-weight: 300; line-height: 1.8; color: var(--text-light); margin-bottom: 0.85rem; }
+  .book-info p { font-size: 0.88rem; font-weight: 300; line-height: 1.8; color: var(--text-light); margin-bottom: 0.85rem; }
   .book-features { margin: 0.75rem 0 1.25rem; display: flex; flex-direction: column; gap: 0.5rem; }
-  .book-feature { display: flex; align-items: center; gap: 0.65rem; font-size: 0.84rem; color: var(--text-light); }
+  .book-feature { display: flex; align-items: center; gap: 0.65rem; font-size: 0.82rem; color: var(--text-light); }
   .feature-dot { width: 5px; height: 5px; flex-shrink: 0; }
   .feature-dot.green { background: var(--forest); }
   .feature-dot.blue { background: var(--slate); }
-  .btn-primary { display: inline-flex; align-items: center; gap: 0.6rem; text-decoration: none; padding: 0.85rem 1.75rem; font-size: 0.8rem; font-weight: 400; letter-spacing: 0.1em; text-transform: uppercase; transition: all 0.25s; margin-top: auto; align-self: flex-start; }
+  .feature-dot.purple { background: var(--purple); }
+  .btn-primary { display: inline-flex; align-items: center; gap: 0.6rem; text-decoration: none; padding: 0.85rem 1.5rem; font-size: 0.78rem; font-weight: 400; letter-spacing: 0.1em; text-transform: uppercase; transition: all 0.25s; margin-top: auto; align-self: flex-start; }
   .btn-primary.green { background: var(--forest); color: var(--cream); }
   .btn-primary.green:hover { background: var(--forest-dark); transform: translateY(-1px); }
   .btn-primary.slate { background: var(--slate); color: var(--cream); }
   .btn-primary.slate:hover { background: #1e2e3d; transform: translateY(-1px); }
+  .btn-primary.purple { background: var(--purple); color: var(--cream); }
+  .btn-primary.purple:hover { background: var(--purple-dark); transform: translateY(-1px); }
   .btn-primary svg { width: 13px; height: 13px; transition: transform 0.2s; }
   .btn-primary:hover svg { transform: translateX(3px); }
-  .btn-soon { display: inline-flex; align-items: center; gap: 0.6rem; padding: 0.85rem 1.75rem; font-size: 0.78rem; font-weight: 400; letter-spacing: 0.12em; text-transform: uppercase; color: var(--slate); border: 1px solid rgba(44,62,80,0.3); margin-top: auto; align-self: flex-start; cursor: default; }
   .btn-map { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.6rem 1.1rem; font-size: 0.74rem; font-weight: 400; letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none; border: 1px solid var(--forest); color: var(--forest); transition: all 0.2s; align-self: flex-start; }
   .btn-map:hover { background: var(--forest); color: var(--cream); }
   .btn-map-slate { border-color: var(--slate); color: var(--slate); }
   .btn-map-slate:hover { background: var(--slate); color: var(--cream); }
+  .btn-map-purple { border-color: var(--purple); color: var(--purple); }
+  .btn-map-purple:hover { background: var(--purple); color: var(--cream); }
 
   /* STATS */
   .stats { background: var(--forest); padding: 3rem 2rem; }
@@ -181,10 +120,9 @@
 
   /* COMING SOON */
   .coming-soon { background: var(--cream); padding: 7rem 2rem; }
-  .coming-soon-inner { max-width: 800px; margin: 0 auto; }
+  .coming-soon-inner { max-width: 500px; margin: 0 auto; }
   .coming-soon-inner > .section-label { display: block; text-align: center; margin-bottom: 0.75rem; }
   .coming-soon-inner > h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 3.5vw, 2.8rem); font-weight: 300; color: var(--forest-dark); text-align: center; margin-bottom: 4rem; }
-  .books-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; }
   .book-card { background: var(--cream-dark); padding: 2.5rem 2rem; text-align: center; position: relative; transition: transform 0.25s; }
   .book-card:hover { transform: translateY(-4px); }
   .book-card-icon { width: 48px; height: 42px; margin: 0 auto 1.5rem; opacity: 0.4; }
@@ -216,18 +154,15 @@
   .footer-links a { font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(245,240,232,0.35); text-decoration: none; transition: color 0.2s; }
   .footer-links a:hover { color: rgba(245,240,232,0.7); }
 
-  /* ANIMATIONS */
   @keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
   @keyframes scrollPulse { 0%, 100% { opacity: 0.3; } 50% { opacity: 0.7; } }
 
-  /* RESPONSIVE */
+  @media (max-width: 900px) { .book-triple { grid-template-columns: 1fr; gap: 4rem; } }
   @media (max-width: 768px) {
     nav { padding: 1rem 1.5rem; }
     .nav-links { display: none; }
-    .book-pair { grid-template-columns: 1fr; gap: 4rem; }
     .stats-inner { grid-template-columns: repeat(2, 1fr); }
     .stat-divider { border-right: none; }
-    .books-grid { grid-template-columns: 1fr; }
     footer { flex-direction: column; gap: 1rem; text-align: center; }
   }
 </style>
@@ -285,7 +220,7 @@
       <span class="section-label">Available Now</span>
       <h2>The Peak Log Books <em>Series</em></h2>
     </div>
-    <div class="book-pair">
+    <div class="book-triple">
 
       <!-- MUNROS -->
       <div class="book-entry">
@@ -333,10 +268,38 @@
             <div class="book-feature"><div class="feature-dot blue"></div>Master checklist and completion certificate</div>
           </div>
           <a href="https://www.amazon.co.uk/dp/B0GYS6F3CR" class="btn-primary slate" target="_blank" rel="noopener">
-            Available Soon, £10.99
+            Coming Soon, £10.99
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
           </a>
           <a href="corbetts-map.html" class="btn-map btn-map-slate" style="margin-top:0.6rem;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:13px;height:13px;"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            View Interactive Map
+          </a>
+        </div>
+      </div>
+
+      <!-- GRAHAMS -->
+      <div class="book-entry">
+        <div class="book-cover-wrap">
+          <span class="book-badge soon">Coming Soon</span>
+          <div class="book-cover">
+            <img src="Graham_front_cover.png" alt="The Complete Graham Bagging Log Book cover">
+          </div>
+        </div>
+        <div class="book-info">
+          <span class="book-series-label">Book 3 · 231 Summits</span>
+          <h3>The Complete Graham<br><em>Bagging Log Book</em></h3>
+          <p>Record all 231 Scottish Grahams, mountains between 2,000 and 2,500 feet. Reaching into the islands and far north, the Grahams offer some of Scotland's finest and most rewarding walking.</p>
+          <div class="book-features">
+            <div class="book-feature"><div class="feature-dot purple"></div>231 individual log pages, one per Graham</div>
+            <div class="book-feature"><div class="feature-dot purple"></div>Pre-filled height, region and summit fact</div>
+            <div class="book-feature"><div class="feature-dot purple"></div>Master checklist and completion certificate</div>
+          </div>
+          <a href="https://www.amazon.co.uk/dp/B0GYS6F3CR" class="btn-primary purple" target="_blank" rel="noopener">
+            Coming Soon, £10.99
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <a href="grahams-map.html" class="btn-map btn-map-purple" style="margin-top:0.6rem;">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:13px;height:13px;"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
             View Interactive Map
           </a>
@@ -351,15 +314,15 @@
 <section class="stats">
   <div class="stats-inner">
     <div class="stat-divider">
-      <div class="stat-number">2</div>
-      <div class="stat-label">Books Published</div>
+      <div class="stat-number">3</div>
+      <div class="stat-label">Books in Series</div>
     </div>
     <div class="stat-divider">
-      <div class="stat-number">504</div>
+      <div class="stat-number">735</div>
       <div class="stat-label">Summits Covered</div>
     </div>
     <div class="stat-divider">
-      <div class="stat-number">531</div>
+      <div class="stat-number">750+</div>
       <div class="stat-label">Combined Pages</div>
     </div>
     <div>
@@ -386,27 +349,15 @@
   <div class="coming-soon-inner">
     <span class="section-label">Coming Next</span>
     <h2>More titles in the series</h2>
-    <div class="books-grid">
-      <div class="book-card">
-        <svg class="book-card-icon" viewBox="0 0 60 52" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M30 4 L56 48 L4 48 Z" stroke="#2C4A35" stroke-width="2" fill="none"/>
-          <path d="M10 48 L30 18 L46 40" stroke="#2C4A35" stroke-width="1.5" fill="none"/>
-        </svg>
-        <h3>The Grahams</h3>
-        <span class="count">224 Summits</span>
-        <p>Scottish peaks between 2,000 and 2,500 feet, reaching into the islands and far north.</p>
-        <span class="soon-tag">Coming Soon</span>
-      </div>
-      <div class="book-card">
-        <svg class="book-card-icon" viewBox="0 0 60 52" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M30 4 L56 48 L4 48 Z" stroke="#2C4A35" stroke-width="2" fill="none"/>
-          <path d="M10 48 L30 18 L46 40" stroke="#2C4A35" stroke-width="1.5" fill="none"/>
-        </svg>
-        <h3>The Wainwrights</h3>
-        <span class="count">214 Fells</span>
-        <p>All 214 Lake District fells described in Alfred Wainwright's legendary pictorial guides.</p>
-        <span class="soon-tag">Coming Soon</span>
-      </div>
+    <div class="book-card">
+      <svg class="book-card-icon" viewBox="0 0 60 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M30 4 L56 48 L4 48 Z" stroke="#2C4A35" stroke-width="2" fill="none"/>
+        <path d="M10 48 L30 18 L46 40" stroke="#2C4A35" stroke-width="1.5" fill="none"/>
+      </svg>
+      <h3>The Wainwrights</h3>
+      <span class="count">214 Fells</span>
+      <p>All 214 Lake District fells described in Alfred Wainwright's legendary pictorial guides.</p>
+      <span class="soon-tag">Coming Soon</span>
     </div>
   </div>
 </section>
@@ -443,61 +394,30 @@
   </div>
 </footer>
 
-<!-- Firebase SDK -->
 <script type="module">
   import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
   import { getFirestore, collection, addDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
-
-  const firebaseConfig = {
-    apiKey: "AIzaSyAbLhuB7ZHX3UAX4CLtAMaBowQI8VZITGs",
-    authDomain: "peak-log-books.firebaseapp.com",
-    projectId: "peak-log-books",
-    storageBucket: "peak-log-books.firebasestorage.app",
-    messagingSenderId: "619797104445",
-    appId: "1:619797104445:web:8963cd967e682f29c2a754"
-  };
-
+  const firebaseConfig = { apiKey: "AIzaSyAbLhuB7ZHX3UAX4CLtAMaBowQI8VZITGs", authDomain: "peak-log-books.firebaseapp.com", projectId: "peak-log-books", storageBucket: "peak-log-books.firebasestorage.app", messagingSenderId: "619797104445", appId: "1:619797104445:web:8963cd967e682f29c2a754" };
   const app = initializeApp(firebaseConfig);
   const db = getFirestore(app);
-
   document.getElementById('contactForm').addEventListener('submit', async (e) => {
     e.preventDefault();
     const btn = document.getElementById('submitBtn');
-    btn.textContent = 'Sending...';
-    btn.disabled = true;
+    btn.textContent = 'Sending...'; btn.disabled = true;
     const name = document.getElementById('contactName').value.trim();
     const email = document.getElementById('contactEmail').value.trim();
     const message = document.getElementById('contactMessage').value.trim();
     try {
       await addDoc(collection(db, 'contacts'), { name, email, message, timestamp: serverTimestamp() });
-      btn.textContent = 'Message sent, thank you';
-      btn.style.opacity = '0.6';
+      btn.textContent = 'Message sent, thank you'; btn.style.opacity = '0.6';
       document.getElementById('contactForm').reset();
-    } catch (err) {
-      console.error('Error saving message:', err);
-      btn.textContent = 'Something went wrong. Please try again.';
-      btn.disabled = false;
-    }
+    } catch (err) { btn.textContent = 'Something went wrong. Please try again.'; btn.disabled = false; }
   });
 </script>
 
 <script>
-  // Scroll reveal
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.style.opacity = '1';
-        entry.target.style.transform = 'translateY(0)';
-      }
-    });
-  }, { threshold: 0.1 });
-
-  document.querySelectorAll('.books-section-inner, .about-inner, .coming-soon-inner, .contact-inner').forEach(el => {
-    el.style.opacity = '0';
-    el.style.transform = 'translateY(24px)';
-    el.style.transition = 'opacity 0.7s ease, transform 0.7s ease';
-    observer.observe(el);
-  });
+  const observer = new IntersectionObserver((entries) => { entries.forEach(entry => { if (entry.isIntersecting) { entry.target.style.opacity = '1'; entry.target.style.transform = 'translateY(0)'; } }); }, { threshold: 0.1 });
+  document.querySelectorAll('.books-section-inner, .about-inner, .coming-soon-inner, .contact-inner').forEach(el => { el.style.opacity = '0'; el.style.transform = 'translateY(24px)'; el.style.transition = 'opacity 0.7s ease, transform 0.7s ease'; observer.observe(el); });
 </script>
 
 </body>
