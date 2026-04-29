@@ -85,13 +85,13 @@
   .hero-scroll span { font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(245,240,232,0.3); }
   .scroll-line { width: 1px; height: 40px; background: linear-gradient(to bottom, rgba(245,240,232,0.3), transparent); animation: scrollPulse 2s infinite; }
 
-  /* BOOKS GRID — two books side by side */
+  /* BOOKS GRID - two books side by side */
   .books-section {
     background: var(--cream);
     padding: 7rem 2rem;
   }
   .books-section-inner {
-    max-width: 1100px;
+    max-width: 900px;
     margin: 0 auto;
   }
   .books-section-header {
@@ -109,7 +109,7 @@
   .book-pair {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 3rem;
+    gap: 2rem;
   }
 
   .book-entry {
@@ -120,6 +120,7 @@
   .book-cover-wrap {
     position: relative;
     margin-bottom: 1.75rem;
+    padding-top: 1.5rem;
   }
   .book-cover {
     width: 100%;
@@ -131,10 +132,11 @@
   .book-cover img { width: 100%; height: 100%; object-fit: cover; }
   .book-badge {
     position: absolute;
-    top: -0.75rem; right: -0.75rem;
+    top: 0; right: 0;
     font-size: 0.62rem; letter-spacing: 0.15em; text-transform: uppercase;
     padding: 0.35rem 0.75rem;
     color: var(--white);
+    z-index: 2;
   }
   .book-badge.live { background: var(--forest); }
   .book-badge.review { background: var(--slate); }
@@ -284,9 +286,9 @@
       <!-- MUNROS -->
       <div class="book-entry">
         <div class="book-cover-wrap">
+          <span class="book-badge live">Live on Amazon</span>
           <div class="book-cover">
-            <img src="https://m.media-amazon.com/images/I/61xFDWfFY7L._SY466_.jpg" alt="The Complete Munro Bagging Log Book cover">
-            <span class="book-badge live">Live on Amazon</span>
+            <img src="Munro_front_cover.png" alt="The Complete Munro Bagging Log Book cover">
           </div>
         </div>
         <div class="book-info">
@@ -308,22 +310,22 @@
       <!-- CORBETTS -->
       <div class="book-entry">
         <div class="book-cover-wrap">
+          <span class="book-badge review">Coming Soon</span>
           <div class="book-cover">
             <img src="Corbett_front_cover.png" alt="The Complete Corbett Bagging Log Book cover">
-            <span class="book-badge review">Coming Soon</span>
           </div>
         </div>
         <div class="book-info">
           <span class="book-series-label">Book 2 · 222 Summits</span>
           <h3>The Complete Corbett<br><em>Bagging Log Book</em></h3>
-          <p>Record all 222 Scottish Corbetts — Scotland's mountains between 2,500 and 3,000 feet. Often quieter and wilder than the Munros, with their own unique character and charm.</p>
+          <p>Record all 222 Scottish Corbetts, Scotland's mountains between 2,500 and 3,000 feet. Often quieter and wilder than the Munros, with their own unique character and charm.</p>
           <div class="book-features">
             <div class="book-feature"><div class="feature-dot blue"></div>222 individual log pages, one per Corbett</div>
             <div class="book-feature"><div class="feature-dot blue"></div>Pre-filled height, region and summit fact</div>
             <div class="book-feature"><div class="feature-dot blue"></div>Master checklist and completion certificate</div>
           </div>
           <a href="https://www.amazon.co.uk/dp/B0GYS6F3CR" class="btn-primary slate" target="_blank" rel="noopener">
-            Available Soon — £10.99
+            Available Soon, £10.99
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
           </a>
         </div>
@@ -361,7 +363,7 @@
     <span class="section-label">About Peak Log Books</span>
     <h2>Journals and companions<br>for outdoor enthusiasts</h2>
     <div class="divider"></div>
-    <p>Peak Log Books publishes dedicated log books for Scotland's great hill lists. We believe that the record of a climb — the weather, the companions, the route taken — is as important as the climb itself.</p>
+    <p>Peak Log Books publishes dedicated log books for Scotland's great hill lists. We believe that the record of a climb, the weather, the companions, the route taken, is as important as the climb itself.</p>
     <p>Every book in the Peak Log Books series is designed to last a lifetime. Pre-filled with the details that matter, our log books give hillwalkers the structure to record their journeys properly, without the effort of researching each summit from scratch.</p>
     <p>Peak Log Books is a trading name of Dellally Limited, registered in England and Wales.</p>
   </div>
