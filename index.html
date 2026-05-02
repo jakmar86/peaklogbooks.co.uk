@@ -282,4 +282,146 @@
       <div class="book-entry">
         <div class="book-cover-wrap">
           <span class="book-badge soon">Live on Amazon</span>
-          <di
+          <div class="book-entry">
+        <div class="book-cover-wrap">
+          <span class="book-badge soon">Live on Amazon</span>
+          <div class="book-cover">
+            <img src="Graham_front_cover.png" alt="The Complete Graham Bagging Log Book cover">
+          </div>
+        </div>
+        <div class="book-info">
+          <span class="book-series-label">Book 3 · 231 Summits</span>
+          <h3>The Complete Graham<br><em>Bagging Log Book</em></h3>
+          <p>Record all 231 Scottish Grahams, mountains between 2,000 and 2,500 feet. Reaching into the islands and far north, the Grahams offer some of Scotland's finest and most rewarding walking.</p>
+          <div class="book-features">
+            <div class="book-feature"><div class="feature-dot purple"></div>231 individual log pages, one per Graham</div>
+            <div class="book-feature"><div class="feature-dot purple"></div>Pre-filled height, region and summit fact</div>
+            <div class="book-feature"><div class="feature-dot purple"></div>Master checklist and completion certificate</div>
+          </div>
+          <a href="https://www.amazon.co.uk/dp/B0GZC3SCB9" class="btn-primary purple" target="_blank" rel="noopener">
+            Buy on Amazon, £10.99
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <a href="grahams-map.html" class="btn-map btn-map-purple" style="margin-top:0.6rem;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:13px;height:13px;"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            View Interactive Map
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="stats">
+  <div class="stats-inner">
+    <div class="stat-divider">
+      <div class="stat-number">3</div>
+      <div class="stat-label">Books Published</div>
+    </div>
+    <div class="stat-divider">
+      <div class="stat-number">735</div>
+      <div class="stat-label">Summits Covered</div>
+    </div>
+    <div class="stat-divider">
+      <div class="stat-number">750+</div>
+      <div class="stat-label">Combined Pages</div>
+    </div>
+    <div>
+      <div class="stat-number">£10.99</div>
+      <div class="stat-label">Each Book</div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="about-inner">
+    <span class="section-label">About Peak Log Books</span>
+    <h2>Journals and companions<br>for outdoor enthusiasts</h2>
+    <div class="divider"></div>
+    <p>Peak Log Books publishes dedicated log books for Scotland's great hill lists. We believe that the record of a climb, the weather, the companions, the route taken, is as important as the climb itself.</p>
+    <p>Every book in the Peak Log Books series is designed to last a lifetime. Pre-filled with the details that matter, our log books give hillwalkers the structure to record their journeys properly, without the effort of researching each summit from scratch.</p>
+    <p>Peak Log Books is a trading name of Dellally Limited, registered in England and Wales.</p>
+  </div>
+</section>
+
+<!-- COMING SOON -->
+<section class="coming-soon">
+  <div class="coming-soon-inner">
+    <span class="section-label">Coming Next</span>
+    <h2>More titles in the series</h2>
+    <div class="book-card">
+      <svg class="book-card-icon" viewBox="0 0 60 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M30 4 L56 48 L4 48 Z" stroke="#2C4A35" stroke-width="2" fill="none"/>
+        <path d="M10 48 L30 18 L46 40" stroke="#2C4A35" stroke-width="1.5" fill="none"/>
+      </svg>
+      <h3>The Wainwrights</h3>
+      <span class="count">214 Fells</span>
+      <p>All 214 Lake District fells described in Alfred Wainwright's legendary pictorial guides.</p>
+      <span class="soon-tag">Coming Soon</span>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="contact-inner">
+    <span class="section-label" style="color: var(--gold)">Get in Touch</span>
+    <h2>We'd love to hear from you</h2>
+    <p>Questions about our books, stockist enquiries, or just want to share a summit story. We're always happy to hear from fellow hillwalkers.</p>
+    <form class="contact-form" id="contactForm">
+      <input type="text" id="contactName" placeholder="Your name" required>
+      <input type="email" id="contactEmail" placeholder="Email address" required>
+      <textarea id="contactMessage" placeholder="Your message"></textarea>
+      <button type="submit" class="btn-light" id="submitBtn">Send Message</button>
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-brand">
+    <svg viewBox="0 0 60 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M30 4 L56 48 L4 48 Z" stroke="#F5F0E8" stroke-width="2" fill="none"/>
+      <path d="M10 48 L30 18 L46 40" stroke="#F5F0E8" stroke-width="1.5" fill="none"/>
+    </svg>
+    <span class="footer-name">Peak Log Books</span>
+  </div>
+  <span class="footer-copy">© 2026 Dellally Limited. All rights reserved.</span>
+  <div class="footer-links">
+    <a href="#books">Books</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </div>
+</footer>
+
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+  import { getFirestore, collection, addDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
+  const firebaseConfig = { apiKey: "AIzaSyAbLhuB7ZHX3UAX4CLtAMaBowQI8VZITGs", authDomain: "peak-log-books.firebaseapp.com", projectId: "peak-log-books", storageBucket: "peak-log-books.firebasestorage.app", messagingSenderId: "619797104445", appId: "1:619797104445:web:8963cd967e682f29c2a754" };
+  const app = initializeApp(firebaseConfig);
+  const db = getFirestore(app);
+  document.getElementById('contactForm').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const btn = document.getElementById('submitBtn');
+    btn.textContent = 'Sending...'; btn.disabled = true;
+    const name = document.getElementById('contactName').value.trim();
+    const email = document.getElementById('contactEmail').value.trim();
+    const message = document.getElementById('contactMessage').value.trim();
+    try {
+      await addDoc(collection(db, 'contacts'), { name, email, message, timestamp: serverTimestamp() });
+      btn.textContent = 'Message sent, thank you'; btn.style.opacity = '0.6';
+      document.getElementById('contactForm').reset();
+    } catch (err) { btn.textContent = 'Something went wrong. Please try again.'; btn.disabled = false; }
+  });
+</script>
+
+<script>
+  const observer = new IntersectionObserver((entries) => { entries.forEach(entry => { if (entry.isIntersecting) { entry.target.style.opacity = '1'; entry.target.style.transform = 'translateY(0)'; } }); }, { threshold: 0.1 });
+  document.querySelectorAll('.books-section-inner, .about-inner, .coming-soon-inner, .contact-inner').forEach(el => { el.style.opacity = '0'; el.style.transform = 'translateY(24px)'; el.style.transition = 'opacity 0.7s ease, transform 0.7s ease'; observer.observe(el); });
+</script>
+
+</body>
+</html>
