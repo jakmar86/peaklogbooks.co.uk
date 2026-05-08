@@ -1,0 +1,121 @@
+/* Peak Log Books - Shared Styles */
+/* Used by index.html and all mountain pages */
+
+:root {
+  --forest: #2C4A35;
+  --forest-dark: #1a2e20;
+  --forest-light: #3d6347;
+  --cream: #F5F0E8;
+  --cream-dark: #ede6d6;
+  --white: #ffffff;
+  --text: #1a1a1a;
+  --text-light: #4a4a4a;
+  --gold: #9a7c4f;
+  --slate: #2C3E50;
+  --slate-light: #A8C5D6;
+  --purple: #6B3FA0;
+  --purple-dark: #522f7a;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { font-family: 'Jost', sans-serif; background: var(--cream); color: var(--text); overflow-x: hidden; }
+
+/* NAV */
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 1.25rem 3rem; background: rgba(44, 74, 53, 0.97); backdrop-filter: blur(8px); }
+.nav-brand { display: flex; align-items: center; gap: 0.75rem; text-decoration: none; }
+.nav-logo svg { width: 32px; height: 28px; }
+.nav-name { font-family: 'Cormorant Garamond', serif; font-size: 1.15rem; font-weight: 400; color: var(--cream); letter-spacing: 0.04em; }
+.nav-links { display: flex; gap: 2.5rem; list-style: none; }
+.nav-links a { font-size: 0.78rem; font-weight: 400; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(245,240,232,0.75); text-decoration: none; transition: color 0.2s; }
+.nav-links a:hover { color: var(--cream); }
+
+/* MOUNTAIN HERO */
+.mountain-hero { min-height: 52vh; background: var(--forest-dark); display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 8rem 2rem 4rem; position: relative; overflow: hidden; }
+.mountain-hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 80% 60% at 50% 100%, rgba(44,74,53,0.6) 0%, transparent 70%); }
+.mountain-hero-content { position: relative; z-index: 1; max-width: 760px; }
+.mountain-eyebrow { font-size: 0.72rem; font-weight: 400; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold); margin-bottom: 1.25rem; display: block; }
+.mountain-hero h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.8rem, 6vw, 5rem); font-weight: 300; line-height: 1.05; color: var(--cream); margin-bottom: 2rem; }
+.mountain-stats-row { display: flex; align-items: center; justify-content: center; gap: 0; flex-wrap: wrap; }
+.mountain-stat { padding: 0 2.5rem; text-align: center; }
+.mountain-stat-value { display: block; font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-weight: 300; color: var(--cream); line-height: 1.1; margin-bottom: 0.3rem; }
+.mountain-stat-label { font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(245,240,232,0.45); }
+.mountain-stat-divider { width: 1px; height: 40px; background: rgba(245,240,232,0.15); }
+.mountain-hero-mountains { position: absolute; bottom: 0; left: 0; right: 0; }
+
+/* MAIN */
+.mountain-main { background: var(--cream); padding: 5rem 2rem 7rem; }
+.mountain-main-inner { max-width: 800px; margin: 0 auto; }
+
+/* SECTIONS */
+.mountain-fact-section, .mountain-details-section, .mountain-map-section, .mountain-route-section, .mountain-cta-section { margin-bottom: 0; }
+.mountain-divider { width: 48px; height: 1px; background: var(--gold); margin: 3.5rem 0; }
+
+/* DID YOU KNOW */
+.mountain-fact { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.2rem, 2.2vw, 1.55rem); font-weight: 300; font-style: italic; line-height: 1.7; color: var(--forest-dark); border-left: 3px solid var(--forest); padding-left: 1.75rem; margin-top: 1.25rem; }
+
+/* DETAILS GRID */
+.mountain-details-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 1.25rem; }
+.mountain-detail { background: var(--cream-dark); padding: 1.25rem 1.5rem; }
+.detail-label { display: block; font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.4rem; }
+.detail-value { display: block; font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; font-weight: 400; color: var(--forest-dark); }
+
+/* MAP */
+.mountain-map-wrap { margin-top: 1.25rem; overflow: hidden; box-shadow: -4px 4px 0 var(--forest-dark), -8px 8px 24px rgba(0,0,0,0.15); }
+
+/* ROUTE PLACEHOLDER */
+.route-coming-soon { margin-top: 1.25rem; background: var(--cream-dark); padding: 3rem 2rem; text-align: center; }
+.route-coming-soon p { font-size: 0.88rem; font-weight: 300; color: var(--text-light); }
+
+/* CTA */
+.mountain-cta-section h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.6rem, 3vw, 2.4rem); font-weight: 300; color: var(--forest-dark); margin: 1rem 0; line-height: 1.2; }
+.mountain-cta-section p { font-size: 0.9rem; font-weight: 300; line-height: 1.85; color: var(--text-light); margin-bottom: 1.75rem; }
+.mountain-cta-buttons { display: flex; gap: 1rem; flex-wrap: wrap; align-items: center; }
+
+/* SHARED BUTTON STYLES */
+.btn-primary { display: inline-flex; align-items: center; gap: 0.6rem; text-decoration: none; padding: 0.85rem 1.5rem; font-size: 0.78rem; font-weight: 400; letter-spacing: 0.1em; text-transform: uppercase; transition: all 0.25s; }
+.btn-primary.green { background: var(--forest); color: var(--cream); }
+.btn-primary.green:hover { background: var(--forest-dark); transform: translateY(-1px); }
+.btn-primary.slate { background: var(--slate); color: var(--cream); }
+.btn-primary.slate:hover { background: #1e2e3d; transform: translateY(-1px); }
+.btn-primary.purple { background: var(--purple); color: var(--cream); }
+.btn-primary.purple:hover { background: var(--purple-dark); transform: translateY(-1px); }
+.btn-primary svg { width: 13px; height: 13px; transition: transform 0.2s; }
+.btn-primary:hover svg { transform: translateX(3px); }
+.btn-map { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.6rem 1.1rem; font-size: 0.74rem; font-weight: 400; letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none; border: 1px solid var(--forest); color: var(--forest); transition: all 0.2s; }
+.btn-map:hover { background: var(--forest); color: var(--cream); }
+.btn-map-slate { border-color: var(--slate); color: var(--slate); }
+.btn-map-slate:hover { background: var(--slate); color: var(--cream); }
+.btn-map-purple { border-color: var(--purple); color: var(--purple); }
+.btn-map-purple:hover { background: var(--purple); color: var(--cream); }
+
+/* SECTION LABEL */
+.section-label { font-size: 0.7rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold); margin-bottom: 1rem; display: block; }
+.divider { width: 48px; height: 1px; background: var(--gold); margin: 2.5rem auto; }
+
+/* FOOTER */
+footer { background: var(--forest-dark); border-top: 1px solid rgba(245,240,232,0.08); padding: 2rem 3rem; display: flex; align-items: center; justify-content: space-between; }
+.footer-brand { display: flex; align-items: center; gap: 0.6rem; }
+.footer-brand svg { width: 24px; height: 21px; opacity: 0.6; }
+.footer-name { font-family: 'Cormorant Garamond', serif; font-size: 0.95rem; color: rgba(245,240,232,0.5); letter-spacing: 0.05em; }
+.footer-copy { font-size: 0.72rem; color: rgba(245,240,232,0.3); letter-spacing: 0.05em; }
+.footer-links { display: flex; gap: 1.5rem; }
+.footer-links a { font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(245,240,232,0.35); text-decoration: none; transition: color 0.2s; }
+.footer-links a:hover { color: rgba(245,240,232,0.7); }
+
+/* ANIMATIONS */
+@keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  nav { padding: 1rem 1.5rem; }
+  .nav-links { display: none; }
+  .mountain-details-grid { grid-template-columns: repeat(2, 1fr); }
+  .mountain-stat { padding: 0 1.25rem; }
+  footer { flex-direction: column; gap: 1rem; text-align: center; }
+}
+@media (max-width: 480px) {
+  .mountain-details-grid { grid-template-columns: 1fr; }
+  .mountain-stat-divider { display: none; }
+  .mountain-stats-row { gap: 1rem; }
+}
