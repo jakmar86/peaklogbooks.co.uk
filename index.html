@@ -37,7 +37,7 @@
   .books-section-header { text-align: center; margin-bottom: 4rem; }
   .books-section-header h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 3.5vw, 2.8rem); font-weight: 300; color: var(--forest-dark); }
   .books-section-header h2 em { font-style: italic; color: var(--forest); }
-  .book-triple { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+  .book-triple { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; }
   .book-entry { display: flex; flex-direction: column; }
   .book-cover-wrap { position: relative; margin-bottom: 1.75rem; padding-top: 1.5rem; }
   .book-cover { width: 100%; aspect-ratio: 6/9; overflow: hidden; position: relative; box-shadow: -6px 6px 0 var(--forest-dark), -12px 12px 32px rgba(0,0,0,0.2); }
@@ -57,6 +57,7 @@
   .feature-dot.green { background: var(--forest); }
   .feature-dot.blue { background: var(--slate); }
   .feature-dot.purple { background: var(--purple); }
+  .feature-dot.terracotta { background: var(--terracotta); }
   .stats { background: var(--forest); padding: 3rem 2rem; }
   .stats-inner { max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; text-align: center; }
   .stat-divider { border-right: 1px solid rgba(245,240,232,0.15); }
@@ -89,6 +90,7 @@
   .btn-light { background: var(--cream); color: var(--forest-dark); border: none; padding: 0.9rem 2rem; font-family: 'Jost', sans-serif; font-size: 0.82rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; cursor: pointer; transition: all 0.25s; align-self: flex-start; }
   .btn-light:hover { background: var(--white); transform: translateY(-1px); }
   @keyframes scrollPulse { 0%, 100% { opacity: 0.3; } 50% { opacity: 0.7; } }
+  @media (max-width: 1200px) and (min-width: 901px) { .book-triple { grid-template-columns: repeat(2, 1fr); gap: 3rem; } }
   @media (max-width: 900px) { .book-triple { grid-template-columns: 1fr; gap: 4rem; } }
   @media (max-width: 768px) { .stats-inner { grid-template-columns: repeat(2, 1fr); } .stat-divider { border-right: none; } }
 </style>
@@ -232,6 +234,33 @@
         </div>
       </div>
 
+      <!-- WAINWRIGHTS -->
+      <div class="book-entry">
+        <div class="book-cover-wrap">
+          <span class="book-badge review">In Review</span>
+          <div class="book-cover">
+            <img src="Wainwright_front_cover.png" alt="The Complete Wainwright Bagging Log Book cover">
+          </div>
+        </div>
+        <div class="book-info">
+          <span class="book-series-label">Book 4 · 214 Summits</span>
+          <h3>The Complete Wainwright<br><em>Bagging Log Book</em></h3>
+          <p>Record all 214 Lake District fells from Alfred Wainwright's legendary Pictorial Guides. Every fell has its own dedicated page, pre-filled with height, region and a fascinating Did You Know fact.</p>
+          <div class="book-features">
+            <div class="book-feature"><div class="feature-dot terracotta"></div>214 individual log pages, one per fell</div>
+            <div class="book-feature"><div class="feature-dot terracotta"></div>Pre-filled height, region and summit fact</div>
+            <div class="book-feature"><div class="feature-dot terracotta"></div>Master checklist and completion certificate</div>
+          </div>
+          <span class="btn-primary terracotta disabled">
+            Coming to Amazon
+          </span>
+          <a href="wainwrights-map.html" class="btn-map btn-map-terracotta" style="margin-top:0.6rem;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:13px;height:13px;"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            View Interactive Map
+          </a>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
@@ -240,15 +269,15 @@
 <section class="stats">
   <div class="stats-inner">
     <div class="stat-divider">
-      <div class="stat-number">3</div>
+      <div class="stat-number">4</div>
       <div class="stat-label">Books Published</div>
     </div>
     <div class="stat-divider">
-      <div class="stat-number">735</div>
+      <div class="stat-number">949</div>
       <div class="stat-label">Summits Covered</div>
     </div>
     <div class="stat-divider">
-      <div class="stat-number">750+</div>
+      <div class="stat-number">950+</div>
       <div class="stat-label">Combined Pages</div>
     </div>
     <div>
@@ -267,24 +296,6 @@
     <p>Peak Log Books publishes dedicated log books for Scotland's great hill lists. We believe that the record of a climb, the weather, the companions, the route taken, is as important as the climb itself.</p>
     <p>Every book in the Peak Log Books series is designed to last a lifetime. Pre-filled with the details that matter, our log books give hillwalkers the structure to record their journeys properly, without the effort of researching each summit from scratch.</p>
     <p>Peak Log Books is a trading name of Dellally Limited, registered in England and Wales.</p>
-  </div>
-</section>
-
-<!-- COMING SOON -->
-<section class="coming-soon">
-  <div class="coming-soon-inner">
-    <span class="section-label">Coming Next</span>
-    <h2>More titles in the series</h2>
-    <div class="book-card">
-      <svg class="book-card-icon" viewBox="0 0 60 52" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M30 4 L56 48 L4 48 Z" stroke="#2C4A35" stroke-width="2" fill="none"/>
-        <path d="M10 48 L30 18 L46 40" stroke="#2C4A35" stroke-width="1.5" fill="none"/>
-      </svg>
-      <h3>The Wainwrights</h3>
-      <span class="count">214 Fells</span>
-      <p>All 214 Lake District fells described in Alfred Wainwright's legendary pictorial guides.</p>
-      <span class="soon-tag">Coming Soon</span>
-    </div>
   </div>
 </section>
 
