@@ -161,7 +161,7 @@ footer { background: var(--forest-dark); border-top: 1px solid rgba(245,240,232,
 .peak-perf-rule::before { content: ''; position: absolute; left: -2.5px; top: 0; bottom: 0; width: 6px; background-image: radial-gradient(circle, var(--peak-sage) 1.2px, transparent 1.3px); background-size: 6px 16px; background-repeat: repeat-y; opacity: 0.4; }
 
 .peak-section { margin-bottom: 3.25rem; }
-.peak-section-label { font-size: 0.7rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--peak-gold); margin-bottom: 1rem; display: block; }
+.peak-section-label { font-size: 0.7rem; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; color: var(--peak-gold); margin: 0 0 1rem 0; display: block; }
 
 /* DID YOU KNOW */
 .peak-fact-box { border: 1px dashed var(--peak-gold); background: rgba(184,160,85,0.06); padding: 1.75rem 2rem; }
